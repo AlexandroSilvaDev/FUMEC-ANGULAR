@@ -28,11 +28,20 @@ nav img {
 }
 
 /*CONTEUDO*/
-#conteudo {
-    margin: 10px;
+main {
+    width: 810px;
+    margin-top: 10px;
+    margin-left: auto;
+    margin-right: auto;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+}
+
+#conteudo {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
 }
 
 /*EMBLEMA*/
@@ -41,7 +50,6 @@ nav img {
     height: 180px;
     width: 110px;
     border-radius: 0 0 100px 100px;
-    
 }
 
 #emblema-cabecalho {
@@ -65,7 +73,6 @@ nav img {
     color: white;
     font-family: 'Roboto', sans-serif;
     font-size: 23px;
-    
 }
 
 #emblema-descricao1-nivel {
@@ -110,6 +117,7 @@ nav img {
     gap: 2px;
 }
 
+/*NÍVEL E BARRA DE PROGRESSO*/
 #descricao {
     display: flex;
     flex-direction: column;
@@ -151,4 +159,30 @@ nav img {
     flex-direction: row;
     align-items: center;
     gap: 2px;
+}
+
+/*TABELA*/
+#tabela {
+    margin-top: 10px;
+    height: 120px;
+    width: 690px;
+}
+
+table {
+    width: 690px;
+    font-family: 'Roboto', sans-serif;
+    font-size: 12px;
+    border-collapse: collapse;
+}
+
+td {
+    border: 1px solid black;
+    padding: 8px;
+    
+}
+
+#linha-1 td {
+    background-color: #66CB55;
+    color: white;
+    border: 0px;
 }
