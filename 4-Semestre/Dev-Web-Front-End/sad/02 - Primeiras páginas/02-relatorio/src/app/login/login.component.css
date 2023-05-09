@@ -1,0 +1,31 @@
+/* .material-symbols-outlined 
+{
+  font-variation-settings:
+  'FILL' 0,
+  'wght' 400,
+  'GRAD' 0,
+  'opsz' 48
+} */
+.gradient
+{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 875px;
+  width: auto;
+  background: linear-gradient(45deg, red, #DDF7E3, #C7E8CA, green);
+  animation: colors 15s ease infinite;
+}
+
+@keyframes colors
+{
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
