@@ -1,6 +1,6 @@
 export interface Users {
-    id: number;
-    name: string;
+    level: number;
     team: string;
+    name: string;
     photo: string;
 }

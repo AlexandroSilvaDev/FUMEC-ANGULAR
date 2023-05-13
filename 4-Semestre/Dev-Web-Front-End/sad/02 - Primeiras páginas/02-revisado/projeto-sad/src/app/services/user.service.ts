@@ -1,43 +1,53 @@
-import { Injectable, OnInit } from '@angular/core';
+import { Injectable } from '@angular/core';
 
 import { Users } from '../interfaces/Users';
 
 @Injectable({
   providedIn: 'root'
 })
-export class UserService implements OnInit {
-  public users: Array<Users> = [
+export class UserService {
+  
+  public users: Users[] = [
       {
-        id: 1,
+        level: 68,
+        team: "N1",
         name: "Thiago",
-        team: "N1",
-        photo: "",
+        photo: ""
       },
-  
       {
-        id: 2,
+        level: 97,
+        team: "N1",
         name: "Alexandro",
-        team: "N1",
-        photo: "",
+        photo: ""
       },
-  
       {
-        id: 3,
-        name: "Raian",
+        level: 89,
         team: "N2",
-        photo: "",
+        name: "Raian",
+        photo: ""
       }
-  ]
-
-  public obterTodos() {
-    return this.users;
-  }
+  ];
 
   constructor() {
     
   }
 
-  ngOnInit(): void {
-    
+  public obterTodos() {
+    return this.users;
+  }
+
+  public obter(name: string): Users {
+    for (let user of this.users) {
+      if (user.name === name) {
+        return user;
+      }
+    }
+
+    return {
+      level: 0,
+      team: "",
+      name: "",
+      photo: ""
+    };
   }
 }

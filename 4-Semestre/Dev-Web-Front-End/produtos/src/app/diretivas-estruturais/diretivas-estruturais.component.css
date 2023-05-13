@@ -1,0 +1,26 @@
+.bloco-red {
+    background-color: red;
+    height: 200px;
+    width: 200px;
+    margin: 2px;
+}
+
+.bloco-blue {
+    background-color: blue;
+    height: 200px;
+    width: 200px;
+    margin: 2px;
+}
+
+.texto-impar {
+    font-size: xx-large;
+    font-weight: bold;
+    color: blue;
+}
+
+
+.texto-par {
+    font-size: xx-large;
+    font-weight: bold;
+    color: red;
+}
