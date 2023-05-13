@@ -1,11 +1,4 @@
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    text-decoration: none;
-}
-
-main {
+#conteudo {
     height: 100vh;
     font-size: 100%;
     display: flex;
@@ -14,49 +7,13 @@ main {
     align-items: center;
 }
 
-.emblemas {
-    gap: 20px;
+#cards {
     display: flex;
     flex-direction: row;
+    justify-content: space-evenly;
+    gap: 20px;
     align-items: center;
-    justify-content: space-around;
     margin-bottom: 30px;
-}
-
-#emblema1 {
-    background-color: #66CB55;
-    height: 140px;
-    width: 110px;
-    border-radius: 0 0 100px 100px;
-}
-
-.emblema1-cabecalho {
-    background-color: #D9D9D9;
-    height: 20px;
-    width: 110px;
-    
-}
-
-.emblema1-corpo {
-    display: flex;
-    display: row;
-    align-items: center;
-    justify-content: space-around;
-    padding: 10px;
-}
-
-.emblema1-nivel {
-    color: white;
-    font-family: Roboto, sans-serif;
-    font-weight: 700;
-    font-size: 23px;
-}
-
-.emblema1-equipe {
-    color: white;
-    font-family: Roboto, sans-serif;
-    font-weight: 700;
-    font-size: 23px;
 }
 
 h1 {
