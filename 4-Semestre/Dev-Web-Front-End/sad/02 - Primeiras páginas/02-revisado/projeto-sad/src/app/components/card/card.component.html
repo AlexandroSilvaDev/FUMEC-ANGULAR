@@ -1,4 +1,4 @@
-<div id="card">
+<div id="card" *ngFor="let user of usersList">
     <div id="card-cabecalho">
 
     </div>
@@ -7,10 +7,10 @@
         <div id="card-corpo-topo">
             <div id="card-descricao1">
                 <div id="card-descricao1-nivel">
-                    92
+                    {{user.level}}
                 </div>
                 <div id="card-descricao1-equipe">
-                    N1
+                    {{user.team}}
                 </div>
             </div>
             <img src="../../../assets/images/Fotologo.svg" alt="Foto do perfil">
@@ -18,7 +18,7 @@
 
         <div id="card-descricao2">
             <div id="card-descricao2-nome">
-                Alexandro
+                {{user.name}}
             </div>
             <div id="card-descricao2-atributos">
                 <div id="card-desc2-atributos-col1">

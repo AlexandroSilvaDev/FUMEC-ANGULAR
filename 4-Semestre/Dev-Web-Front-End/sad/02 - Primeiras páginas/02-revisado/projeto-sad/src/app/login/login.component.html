@@ -1,8 +1,6 @@
 <title>Login</title>
 <div id="conteudo">
-    <div id="cards">
-        <app-mini-card *ngFor="let user of usersList"></app-mini-card>
-    </div>
+    <app-mini-card></app-mini-card>
 
     <div id="formulario">
         <div id="titulo-subtitulo">
@@ -15,17 +13,17 @@
                 <label for="email">
                     <img src="../../assets/images/user-icon.svg" alt="ícone de usuário">
                 </label>
-                <input type="email" name="email" id="email" placeholder="Email">
+                <input [(ngModel)]="user.email" type="email" name="email" id="email" placeholder="Email">
             </div>
 
             <div id="form-senha">
                 <label for="senha">
                     <img src="../../assets/images/pass-icon.svg" alt="Ícone de senha">
                 </label>
-                <input type="password" name="senha" id="senha" placeholder="Senha">
+                <input [(ngModel)]="user.password" type="password" name="senha" id="senha" placeholder="Senha">
             </div>
 
-            <input type="submit" value="Entrar" id="form-botao" routerLink="/dashboard">
+            <input type="submit" value="Entrar" id="form-botao" (click)="logIn()">
         </form>
     </div>
 </div>

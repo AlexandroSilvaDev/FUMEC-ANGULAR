@@ -1,31 +1,18 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
+
+import { Users } from '../interfaces/Users';
+import { UserService } from '../services/user.service';
 
 @Component({
   selector: 'app-manager-page',
   templateUrl: './manager-page.component.html',
   styleUrls: ['./manager-page.component.css']
 })
-export class ManagerPageComponent implements OnInit {
-  members1 = [
-    {member: "Thiago"},
-    {member: "Alexandro"},
-    {member: "Raian"},
-    {member: "Lucas"},
-    {member: "Gabriel"}
-  ];
+export class ManagerPageComponent {
 
-  members2 = [
-    {member: "Thiago"},
-    {member: "Alexandro"},
-    {member: "Raian"},
-    {member: "Lucas"},
-  ];
+  public usersList: Array<Users> = [];
 
-  constructor() {
-
-  }
-
-  ngOnInit(): void {
-    
+  constructor(private userService: UserService) {
+    this.usersList = this.userService.getAllUsers();
   }
 }

@@ -1,14 +1,14 @@
-<div id="card">
+<div id="card" *ngFor="let user of usersList">
     <div id="card-cabecalho">
 
     </div>
     <div id="card-corpo">
         <div id="card-descricao">
             <div id="card-nivel">
-                88
+                {{user.level}}
             </div>
             <div id="card-equipe">
-                N1
+                {{user.team}}
             </div>
         </div>
 

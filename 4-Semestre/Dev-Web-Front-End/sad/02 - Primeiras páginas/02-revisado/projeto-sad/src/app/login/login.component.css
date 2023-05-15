@@ -7,15 +7,6 @@
     align-items: center;
 }
 
-#cards {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-evenly;
-    gap: 20px;
-    align-items: center;
-    margin-bottom: 30px;
-}
-
 h1 {
     font-family: 'Roboto', sans-serif;
     font-weight: 700;

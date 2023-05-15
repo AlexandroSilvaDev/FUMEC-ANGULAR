@@ -1,5 +1,4 @@
-import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
+import { Component } from '@angular/core';
 
 import { Users } from 'src/app/interfaces/Users';
 import { UserService } from 'src/app/services/user.service';
@@ -9,31 +8,12 @@ import { UserService } from 'src/app/services/user.service';
   templateUrl: './mini-card.component.html',
   styleUrls: ['./mini-card.component.css']
 })
-export class MiniCardComponent implements OnInit {
+export class MiniCardComponent {
 
-  public user: Users = {
-    level: 0,
-    team: "",
-    name: '',
-    photo: ""
-  };
+  public usersList: Array<Users> = [];
 
-  constructor(private rotaAtiva: ActivatedRoute,
-              private userService: UserService) {
-    
+  constructor(private userService: UserService) {
+    this.usersList = this.userService.getAllUsers();
   }
 
-  ngOnInit(): void {
-   const name = String(this.rotaAtiva.snapshot.paramMap.get('name'));
-   
-   this.user = this.userService.obter(name);
-  }
-
-  /*
-  public usersList: Users[] = [];
-
-  constructor(public userService: UserService) {
-    this.usersList = this.userService.obterTodos();
-  }
-  */
 }
