@@ -1,0 +1,27 @@
+
+<div class="row mt-5">
+
+
+    <div class="col-3 ml-3" *ngFor="let produto of produtosLista" class="card" style="width: 18rem;">
+        <img [src]="produto.foto" class="card-img-top" alt="...">
+        <div class="card-body">
+        <h5 class="card-title">{{produto.id}} - {{produto.nome}}</h5>
+        <p class="card-text">
+            {{produto.descricao}}
+        </p>
+        <h6> {{produto.preco | currency: 'BRL'}} reais</h6>
+        
+        <a [routerLink]="['/produto-detalhes', produto.id]" class="btn btn-success">
+            Comprar
+        </a>
+        </div>
+    </div>
+
+   
+</div>
+
+
+
+
+
+

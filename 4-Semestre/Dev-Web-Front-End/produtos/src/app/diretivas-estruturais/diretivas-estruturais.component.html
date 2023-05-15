@@ -1,0 +1,75 @@
+
+
+<h1>ngIF</h1>
+<div *ngIf="exibir" class="bloco-red">
+    Caixa 1
+</div>
+
+
+<div *ngIf="!exibir" class="bloco-blue">
+    Caixa 2
+</div>
+
+
+<button class="btn btn-primary" (click)="mostrar()">Ação</button>
+
+<h1>ngFor</h1>
+
+<h5>Lista de compras</h5>
+<div>
+    <label>Novo</label>
+    <input type="text" [(ngModel)]="novoProduto">
+    <button class="btn btn-primary" (click)="adicionar()">Add</button>
+    <button class="btn btn-danger" (click)="remover()">Excluir</button>
+</div>
+<ul>
+    <li *ngFor="let item of produtos">
+        {{item}}
+    </li>
+</ul>
+
+<h5>Uso do index</h5>
+<ul>
+    <li *ngFor="let item of produtos; let i=index">
+       {{i + 1}} : {{item}}
+    </li>
+</ul>
+
+
+<h5>Uso do odd</h5>
+<ul>
+    <li *ngFor="let item of produtos; let impar=odd">
+        {{item}}, posição é ímpar? {{impar}}
+    </li>
+</ul>
+
+
+
+<h5>Uso do even</h5>
+<ul>
+    <li *ngFor="let item of produtos; let par=even">
+        {{item}}, posição é par? {{par}}
+    </li>
+</ul>
+
+
+<h5>Uso do last</h5>
+<ul>
+    <li *ngFor="let item of produtos; let ultimo=last">
+        {{item}}, é a última posição? {{ultimo}}
+    </li>
+</ul>
+
+
+<h5>Uso do even e odd com style</h5>
+
+<ul>
+    <li *ngFor="let item of produtos; let par=even; let impar=odd">
+        <p [ngClass]="{ 'texto-par': par, 'texto-impar': impar }"
+        >
+            {{item}}, posição é par? {{par}}
+        </p>
+    </li>
+</ul>
+
+

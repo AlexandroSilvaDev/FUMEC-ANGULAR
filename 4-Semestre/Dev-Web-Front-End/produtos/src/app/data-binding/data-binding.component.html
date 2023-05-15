@@ -1,0 +1,22 @@
+
+
+<h1>{{ nome }}</h1>
+
+<div>
+  <label>Nome:</label>
+  <input type="text" name="nome" id="nome" 
+  [value]="nome">
+</div>
+
+<img [src]="foto" width="200px">
+
+<button (click)="mensagem()">Texto</button>
+
+
+<h1>{{personagem}}</h1>
+<div>
+  <label>Personagem:</label>
+  <input id="psg" nome="personagem" 
+  [(ngModel)]="personagem">
+</div>
+
