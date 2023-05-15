@@ -10,10 +10,9 @@ import { UserService } from 'src/app/services/user.service';
 })
 export class MiniCardComponent {
 
-  public usersList: Array<Users> = [];
+  public orderedUsersList: Array<Users> = [];
 
   constructor(private userService: UserService) {
-    this.usersList = this.userService.getAllUsers();
+    this.orderedUsersList = this.userService.getTopUsers();
   }
-
 }

@@ -12,7 +12,6 @@ export class UserService {
   
   email = "";
   password = "";
-  team = "";
 
   public users: Array<Users> = [
       {
@@ -98,30 +97,42 @@ export class UserService {
       }
   ];
 
+  public getTopUsers() {
+    const ordered = this.users.sort((x, y) => y.level - x.level);
+    const topUsers = ordered.slice(0, 3);
+    return topUsers;
+  }
+
   public getAllUsers() {
     return this.users;
   }
 
   public getN1Users() {
-    for (let user of this.users) {
-      if (user.team === "N1") {
-      return user;
-      }
-    }
+    const n1Users = this.users.filter((users) => users.team === "N1");
+    return n1Users;
+  }
 
-    return {
-      id: 0,
-      email: "",
-      password: "",
-      level: 0,
-      team: "",
-      name: "",
-      photo: ""
-    };
+  public getN2Users() {
+    const n2Users = this.users.filter((users) => users.team === "N2");
+    return n2Users;
+  }
+
+  public addUser(newUser: Users) {
+    const id = this.users.length+1;
+    newUser.id = id;
+    this.users.push(newUser);
+  }
+
+  public deleteUser(id: number): void {
+    const index = this.users.findIndex(user => user.id === id);
+
+    if (index !== -1) {
+      this.users.splice(index, 1);
+    }
   }
   
-  
-  public getData(id: number): Users {
+  /* 
+  public getUserData(id: number): Users {
     for (let user of this.users) {
       if (user.id === id) {
         return user;
@@ -138,4 +149,5 @@ export class UserService {
       photo: ""
     };
   }
+  */
 }

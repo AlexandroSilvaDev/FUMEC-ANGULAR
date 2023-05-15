@@ -10,10 +10,18 @@ import { UserService } from 'src/app/services/user.service';
 })
 export class CardComponent {
 
-  public usersList: Array<Users> = [];
+  public UsersList: Array<Users> = [];
 
   constructor(private userService: UserService) {
-    this.usersList = this.userService.getAllUsers();
+    this.UsersList = this.userService.getAllUsers();
   }
+
+  /*
+  public n1UsersList: Array<Users> = [];
+
+  constructor(private userService: UserService) {
+    this.n1UsersList = this.userService.getN1Users();
+  }
+  */
 
 }

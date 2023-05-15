@@ -1,4 +1,4 @@
-import { Injectable } from '@angular/core';
+import { EventEmitter, Injectable } from '@angular/core';
 
 import { UserService } from './user.service';
 import { Router } from '@angular/router';
@@ -8,6 +8,8 @@ import { Router } from '@angular/router';
 })
 export class AuthService {
   private canLog: boolean = false;
+
+  showMenuEmitter = new EventEmitter<boolean>();
 
   constructor(private router: Router) {}
 
@@ -19,8 +21,10 @@ export class AuthService {
       }
     });
     if (this.canLog === true) {
+      this.showMenuEmitter.emit(true);
       this.router.navigate(['/dashboard']);
     } else {
+      this.showMenuEmitter.emit(false);
       this.canLog = false;
       user.email = '';
       user.password = '';

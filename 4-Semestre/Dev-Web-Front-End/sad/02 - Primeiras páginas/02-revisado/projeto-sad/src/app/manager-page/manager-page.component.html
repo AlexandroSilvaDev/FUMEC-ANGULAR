@@ -1,7 +1,19 @@
 <title>Página do gestor</title>
-<app-nav-bar></app-nav-bar>
 
 <div id="conteudo">
+    <div id="settings-bar">
+        <div id="buttons">
+            <input type="submit" value="Registrar" class="button" id="register-button" routerLink="/register-page">
+            <input type="submit" value="Remover" class="button" id="delete-button" routerLink="/delete-page">
+            <input type="submit" value="Atualizar" class="button" id="update-button" routerLink="/update-page">
+        </div>
+        <div id="search-bar">
+            <label for="search"></label>
+            <input type="search" name="search" id="search" placeholder="Pesquisar">
+        </div>
+    </div>
+    
+
     <div id="equipe1">
         <h1>N1</h1>
         <div>

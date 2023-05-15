@@ -10,9 +10,13 @@ import { UserService } from '../services/user.service';
 })
 export class ManagerPageComponent {
 
-  public usersList: Array<Users> = [];
+  user: any[] = [];
 
   constructor(private userService: UserService) {
-    this.usersList = this.userService.getAllUsers();
+    this.user = userService.getAllUsers();
+  }
+
+  deleteUser(id: number): void {
+    this.userService.deleteUser(id);
   }
 }
