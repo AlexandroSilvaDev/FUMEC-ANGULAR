@@ -1,0 +1,42 @@
+<title>Página de registro</title>
+
+<div id="conteudo">
+    <div id="form-register">
+        <div id="titulo-subtitulo">
+            <h1>Registro</h1>
+            <h2>Por favor, preencha os campos abaixo</h2>
+        </div>
+    
+        <form action="" id="form-login-senha">
+            <div id="usuario">
+                <label for="name">
+                    <img src="../../assets/images/user-icon.svg" alt="ícone de usuário">
+                </label>
+                <input [(ngModel)]="user.name" type="text" name="name" id="name" placeholder="Nome">
+            </div>
+    
+            <div id="usuario">
+                <label for="email">
+                    <img src="../../assets/images/email-icon.svg" alt="ícone de usuário">
+                </label>
+                <input [(ngModel)]="user.email" type="email" name="email" id="email" placeholder="Email">
+            </div>
+    
+            <div id="form-senha">
+                <label for="senha">
+                    <img src="../../assets/images/pass-icon.svg" alt="Ícone de senha">
+                </label>
+                <input [(ngModel)]="user.password" type="password" name="senha" id="senha" placeholder="Senha">
+            </div>
+    
+            <div id="usuario">
+                <label for="team">
+                    <img src="../../assets/images/team-icon.svg" alt="Ícone de senha">
+                </label>
+                <input [(ngModel)]="user.team" type="text" name="team" id="team" placeholder="Equipe">
+            </div>
+    
+            <input type="submit" value="Registrar" id="form-botao" (click)="register()">
+        </form>
+    </div>
+</div>

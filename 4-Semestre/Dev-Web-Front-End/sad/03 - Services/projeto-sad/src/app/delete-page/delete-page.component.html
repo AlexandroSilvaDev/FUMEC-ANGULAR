@@ -1,0 +1,21 @@
+<title>Página de exclusão</title>
+
+<div id="conteudo">
+    <div id="form-delete">
+        <div id="titulo-subtitulo">
+            <h1>Remover</h1>
+            <h2>Por favor, digite o email do usuário que deseja remover</h2>
+        </div>
+    
+        <form action="" id="form-login-senha">
+            <div id="usuario">
+                <label for="email">
+                    <img src="../../assets/images/email-icon.svg" alt="ícone de usuário">
+                </label>
+                <input [(ngModel)]="user.email" type="email" name="email" id="email" placeholder="Email">
+            </div>
+    
+            <input type="submit" value="Remover" id="form-botao">
+        </form>
+    </div>
+</div>
