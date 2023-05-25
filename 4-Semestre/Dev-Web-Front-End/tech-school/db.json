@@ -1,0 +1,20 @@
+{
+    "cursos":[
+        {
+            "id": 1,
+            "name": "Java Básico",
+            "price": 27.99,
+            "shortDescription": "Bom e barato!",
+            "longDescription": "Curso que te ensino todo o conteúdo necessário para se tornar uma programador decente e não um copiador de código sem noção.",
+            "imgUrl": ""
+        },
+        {
+            "id": 2,
+            "name": "Python Básico",
+            "price": 27.99,
+            "shortDescription": "Bom e barato!",
+            "longDescription": "Curso que te ensino todo o conteúdo necessário para se tornar uma programador decente e não um copiador de código sem noção.",
+            "imgUrl": ""
+        }
+    ]
+}

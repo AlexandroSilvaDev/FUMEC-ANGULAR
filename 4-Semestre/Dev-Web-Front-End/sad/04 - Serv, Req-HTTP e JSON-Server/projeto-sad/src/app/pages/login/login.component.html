@@ -1,0 +1,35 @@
+<title>Login</title>
+<div id="conteudo">
+    <app-mini-card></app-mini-card>
+
+    <div id="formulario">
+        <div id="titulo-subtitulo">
+            <h1>Login</h1>
+            <h2>Por favor, entre com seu login e senha</h2>
+        </div>
+
+        <form action="" id="form-login-senha">
+            <div id="usuario">
+                <label for="email">
+                    <img src="../../assets/images/user-icon.svg" alt="ícone de usuário">
+                </label>
+                <input type="email" name="email" id="email" placeholder="Email" required>
+            </div>
+
+            <div id="form-senha">
+                <label for="senha">
+                    <img src="../../assets/images/pass-icon.svg" alt="Ícone de senha">
+                </label>
+                <input  type="password" name="senha" id="senha" placeholder="Senha" required>
+            </div>
+
+            <input type="submit" value="Entrar" id="form-botao">
+        </form>
+    </div>
+</div>
+
+<!-- 
+[(ngModel)]="user.email"
+[(ngModel)]="user.password"
+(click)="logIn()"
+-->

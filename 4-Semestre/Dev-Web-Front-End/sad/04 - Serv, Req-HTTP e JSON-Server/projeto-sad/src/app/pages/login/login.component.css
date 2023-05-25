@@ -1,0 +1,91 @@
+#conteudo {
+    height: 100vh;
+    font-size: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+h1 {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 700;
+    font-size: 28px;
+}
+
+h2 {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
+    font-size: 13px;
+    color: #818181;
+}
+
+#formulario {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#titulo-subtitulo {
+    width: 270px;
+    margin-bottom: 10px;
+}
+
+#form-login-senha {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#email, #senha{
+    border: 0;
+    height: 48px;
+    width: 270px;
+    border-radius: 8px;
+    padding: 0px 10px 0px 10px;
+    outline: none;
+}
+
+#usuario {
+    border: 1px solid #d1d1d1;
+    width: 270px;
+    border-radius: 8px;
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+}
+
+#form-senha {
+    border: 1px solid #d1d1d1;
+    width: 270px;
+    border-radius: 8px;
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+}
+
+#formulario img {
+    height: 30px;
+    margin: 0px 5px 0px 5px;
+    padding: 5px;
+}
+
+#form-botao {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 15px;
+    width: 40%;
+    background-color: #28A94F;
+    border-radius: 8px;
+    border: 0;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 600;
+    font-size: 14px;
+    color: white;
+}
+
+#form-botao:hover {
+    background-color: #16682f;
+    cursor: pointer;
+}
