@@ -1,20 +1,28 @@
 {
-    "cursos":[
-        {
-            "id": 1,
-            "name": "Java Básico",
-            "price": 27.99,
-            "shortDescription": "Bom e barato!",
-            "longDescription": "Curso que te ensino todo o conteúdo necessário para se tornar uma programador decente e não um copiador de código sem noção.",
-            "imgUrl": ""
-        },
-        {
-            "id": 2,
-            "name": "Python Básico",
-            "price": 27.99,
-            "shortDescription": "Bom e barato!",
-            "longDescription": "Curso que te ensino todo o conteúdo necessário para se tornar uma programador decente e não um copiador de código sem noção.",
-            "imgUrl": ""
-        }
-    ]
+  "cursos": [
+    {
+      "id": 1,
+      "name": "Java Básico",
+      "price": 27.99,
+      "shortDescription": "Bom e barato!",
+      "longDescription": "Curso que te ensino todo o conteúdo necessário para se tornar uma programador decente e não um copiador de código sem noção.",
+      "imgUrl": ""
+    },
+    {
+      "id": 2,
+      "name": "Python Básico",
+      "price": 27.99,
+      "shortDescription": "Bom e barato!",
+      "longDescription": "Curso que te ensino todo o conteúdo necessário para se tornar uma programador decente e não um copiador de código sem noção.",
+      "imgUrl": ""
+    },
+    {
+      "id": 3,
+      "name": "Machine Learning for Leigos",
+      "price": 6000,
+      "shortDescription": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+      "longDescription": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi sed nisl a ante imperdiet blandit. Etiam bibendum semper sapien at aliquam. Maecenas et imperdiet diam, ut laoreet nisi. Fusce mattis augue ac ante pulvinar pulvinar. Fusce id rutrum justo, quis molestie ante. Morbi ut dignissim ipsum. Ut posuere fermentum est, eget mollis mauris cursus nec. Etiam sed nisi quis massa sagittis varius. Vestibulum ut euismod ipsum. Maecenas eget pulvinar nunc, a tristique erat. Praesent ipsum ipsum, imperdiet at placerat et, sodales bibendum magna.",
+      "imgUrl": "https://www.convergenciadigital.com.br/Carreira/IBM-preve-substituir-8-mil-empregos-por-inteligencia-artificial-%28IA%29-63102.html?UserActiveTemplate=mobile"
+    }
+  ]
 }

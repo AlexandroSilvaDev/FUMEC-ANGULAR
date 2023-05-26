@@ -22,6 +22,8 @@ export class CursoComponent {
   
     this.cursoServ.get(id).subscribe((curso)=>{
       console.log(curso);
+
+      this.curso = curso;
     })
   }
 }

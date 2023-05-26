@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
-import { Action } from 'rxjs/internal/scheduler/Action';
 
 import { Users, createUser } from 'src/app/model/users.model';
 import { UserService } from 'src/app/services/user.service';
@@ -11,33 +10,35 @@ import { UserService } from 'src/app/services/user.service';
   styleUrls: ['./card.component.css'],
 })
 export class CardComponent implements OnInit {
-  // public user: Users = createUser();
+  public user: Users = createUser();
 
-  // constructor(private rotaAtiva: ActivatedRoute,
-  //             private userService: UserService) {
-
-  // }
-
-  // ngOnInit(): void {
-  //   const id = Number(this.rotaAtiva.snapshot.paramMap.get('id'));
-
-  //   this.userService.get(id).subscribe((user) => {
-  //     console.log(user);
-  //   });
-  // }
-
-  public users: Users[] = [];
-
-  constructor(private userService: UserService) {
+  constructor(private rotaAtiva: ActivatedRoute,
+              private userService: UserService) {
 
   }
 
   ngOnInit(): void {
-    this.userService.getAll().subscribe((users: Users[])=> {
-      this.users = users;
+    const id = Number(this.rotaAtiva.snapshot.paramMap.get('id'));
 
-      console.log(this.users);
-      
+    this.userService.get(id).subscribe((user) => {
+      console.log(user);
+
+      this.user = user;
     });
   }
+
+  // public users: Users[] = [];
+
+  // constructor(private userService: UserService) {
+
+  // }
+
+  // ngOnInit(): void {
+  //   this.userService.getAll().subscribe((users: Users[])=> {
+  //     this.users = users;
+
+  //     console.log(this.users);
+      
+  //   });
+  // }
 }

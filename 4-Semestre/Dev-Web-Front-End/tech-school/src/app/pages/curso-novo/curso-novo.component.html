@@ -1,1 +1,54 @@
-<p>curso-novo works!</p>
+
+<div class="row justify-content-center">
+
+    <div class="col-8">
+
+        <form>
+            <div class="mb-3">
+              <label for="nome" class="form-label">Nome</label>
+              <input type="text" class="form-control" 
+              id="nome" name="nome" [(ngModel)]="curso.name">
+            </div>
+
+            <div class="mb-3">
+                <label for="foto" class="form-label">Foto</label>
+                <input type="text" class="form-control" 
+                id="foto" name="foto" [(ngModel)]="curso.imgUrl">
+            </div>
+
+            
+            <div class="mb-3">
+                <label for="preco" class="form-label">Preço</label>
+                <input type="number" class="form-control" 
+                id="preco" name="preco" [(ngModel)]="curso.price">
+            </div>
+           
+
+            <div class="mb-3">
+                <label for="descCurta" class="form-label">Descrição</label>
+                <input type="text" class="form-control" 
+                id="descCurta" name="descCurta" [(ngModel)]="curso.shortDescription">
+            </div>
+
+
+            <div class="mb-3">
+                <label for="descLong" 
+                class="form-label">Descrição completa</label>
+                
+                <textarea name="descLong" id="descLong" cols="30" 
+                rows="10"
+                [(ngModel)]="curso.longDescription"
+                 class="form-control"></textarea>
+            </div>
+           
+
+
+
+            <button (click)="cadastrar()" type="button" class="btn btn-primary">
+                Salvar
+            </button>
+        </form>
+
+    </div>
+
+</div>
