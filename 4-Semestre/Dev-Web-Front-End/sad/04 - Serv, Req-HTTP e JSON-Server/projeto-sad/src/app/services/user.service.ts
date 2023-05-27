@@ -2,6 +2,7 @@ import { Injectable } from '@angular/core';
 
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Users } from '../model/users.model';
+import { Response } from '../model/response';
 import { Observable } from 'rxjs';
 
 const httpOptions = {
@@ -14,14 +15,16 @@ const httpOptions = {
   providedIn: 'root',
 })
 export class UserService {
-  constructor(private http: HttpClient) {}
+  constructor(private http: HttpClient) {
+
+  }
 
   public getAll(): Observable<Users[]> {
     return this.http.get<Users[]>('http://localhost:3000/users');
   }
 
   public get(id: number) {
-    return this.http.get<Users>('http://localhost:3000/users'+id);
+    return this.http.get<Users>('http://localhost:3000/users/'+id);
   }
 
   public add(user: Users) {
@@ -30,11 +33,15 @@ export class UserService {
   }
 
   public delete(id: number) {
-    return this.http.delete('http://localhost:3000/users'+id);
+    return this.http.delete('http://localhost:3000/users/'+id);
   }
 
   public update(user: Users) {
     const userJSON = JSON.stringify(user);
-    return this.http.put('http://localhost:3000/users'+user.id, userJSON, httpOptions);
+    return this.http.put('http://localhost:3000/users/'+user.id, userJSON, httpOptions);
+  }
+
+  getUser(id: number): Observable<Response<Users>> {
+    return this.http.get<Response<Users>>('http://localhost:3000/users/'+id);
   }
 }

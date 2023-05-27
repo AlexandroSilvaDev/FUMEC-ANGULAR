@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
 
-import { ActivatedRoute, Router } from '@angular/router';
-import { Users, createUser } from 'src/app/model/users.model';
+import { Users } from 'src/app/model/users.model';
 import { UserService } from 'src/app/services/user.service';
 
 @Component({
@@ -10,24 +10,35 @@ import { UserService } from 'src/app/services/user.service';
   styleUrls: ['./dashboard.component.css']
 })
 export class DashboardComponent {
-  public user: Users = createUser();
+  user?: Users;
 
-  constructor(private activedRoute: ActivatedRoute,
-              private userService: UserService,
-              private route: Router) {
+  constructor(private activatedRoute: ActivatedRoute,
+              private userService: UserService) {
 
   }
 
   ngOnInit() {
-    const id = Number(this.activedRoute.snapshot.paramMap.get('id'));
-    this.userService.get(id).subscribe((user) => {
-      this.user = user;
-    });
+    const id = Number(this.activatedRoute.snapshot.paramMap.get('id'));
+    this.userService.getUser(id).subscribe((item) => (this.user = item.data));
   }
+  
+  // public users: Users[] = [];
 
-  public refresh() {
-    this.userService.update(this.user).subscribe((response) => {
-      this.route.navigate(['/dashboard'])
-    })
-  }
+  // constructor(private userService: UserService) {
+    
+  // }
+
+  // ngOnInit(): void {
+  //   this.userService.getAll().subscribe((users: Users[]) => {
+  //     this.users = users;
+
+  //     console.log(this.users);
+  //   });
+  // }
+
+  // public refresh() {
+  //   this.userService.update(this.user).subscribe((response) => {
+  //     this.route.navigate(['/dashboard'])
+  //   })
+  // }
 }

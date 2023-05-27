@@ -10,11 +10,11 @@ import { UpdatePageComponent } from './pages/update-page/update-page.component';
 const routes: Routes = [
   { path: '', component: LoginComponent },
   { path: 'login', component: LoginComponent },
-  { path: 'dashboard', component: DashboardComponent },
+  { path: 'dashboard/:id', component: DashboardComponent },
   { path: 'manager-page', component: ManagerPageComponent },
   { path: 'register-page', component: RegisterPageComponent },
   { path: 'delete-page', component: DeletePageComponent },
-  { path: 'update-page', component: UpdatePageComponent },
+  { path: 'update-page', component: UpdatePageComponent }
 ];
 
 @NgModule({

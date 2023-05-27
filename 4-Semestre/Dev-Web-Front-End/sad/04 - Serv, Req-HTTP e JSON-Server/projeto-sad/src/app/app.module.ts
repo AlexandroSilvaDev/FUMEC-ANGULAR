@@ -8,7 +8,7 @@ import { AppComponent } from './app.component';
 import { LoginComponent } from './pages/login/login.component';
 import { MiniCardComponent } from './components/mini-card/mini-card.component';
 import { DashboardComponent } from './pages/dashboard/dashboard.component';
-import { CardComponent } from './components/card/card.component';
+// import { CardComponent } from './components/card/card.component';
 import { ManagerPageComponent } from './pages/manager-page/manager-page.component';
 import { NavBarComponent } from './components/nav-bar/nav-bar.component';
 import { AuthService } from './services/auth.service';
@@ -22,7 +22,7 @@ import { DeletePageComponent } from './pages/delete-page/delete-page.component';
     LoginComponent,
     MiniCardComponent,
     DashboardComponent,
-    CardComponent,
+    // CardComponent,
     ManagerPageComponent,
     NavBarComponent,
     RegisterPageComponent,
