@@ -2,7 +2,7 @@ import { Component } from '@angular/core';
 import { Router } from '@angular/router';
 
 import { UserService } from '../../services/user.service';
-import { Users } from '../../model/users.model';
+import { Users, createUser } from '../../model/users.model';
 
 @Component({
   selector: 'app-register-page',
@@ -10,20 +10,16 @@ import { Users } from '../../model/users.model';
   styleUrls: ['./register-page.component.css'],
 })
 export class RegisterPageComponent {
-  // public user: Users = {
-  //   id: 0,
-  //   email: '',
-  //   password: '',
-  //   level: 0,
-  //   team: '',
-  //   name: '',
-  //   photo: '',
-  // };
+  public user: Users = createUser();
 
-  // constructor(private userService: UserService, private route: Router) {}
+  constructor(private userService: UserService,
+              private route: Router) {
 
-  // public register() {
-  //   this.userService.addUser(this.user);
-  //   this.route.navigate(['/manager-page']);
-  // }
+  }
+
+  public register() {
+    this.userService.add(this.user).subscribe((user) => {
+      this.route.navigate(['/manager-page']);
+    });
+  }
 }

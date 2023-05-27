@@ -40,7 +40,7 @@ h2 {
     align-items: center;
 }
 
-#email, #senha, #name, #team{
+#id, #senha, #name, #team{
     border: 0;
     height: 48px;
     width: 270px;

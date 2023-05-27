@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 
-import { UserService } from 'src/app/services/user.service';
 import { AuthService } from 'src/app/services/auth.service';
+import { Users } from 'src/app/model/users.model';
 
 @Component({
   selector: 'app-login',
@@ -9,16 +9,13 @@ import { AuthService } from 'src/app/services/auth.service';
   styleUrls: ['./login.component.css']
 })
 export class LoginComponent {
+  user?: Users;
 
-  
+  constructor(private authService: AuthService) {
 
-  // constructor(private authService: AuthService) {
+  }
 
-  // }
-
-  // public user: UserService = new UserService();
-
-  // logIn() {
-  //   this.authService.logIn(this.user);
-  // }
+  logIn() {
+    this.authService.logIn(this.user);
+  }
 }

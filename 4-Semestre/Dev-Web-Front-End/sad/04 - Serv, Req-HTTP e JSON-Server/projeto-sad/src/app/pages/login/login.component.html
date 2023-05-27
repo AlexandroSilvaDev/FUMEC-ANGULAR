@@ -13,7 +13,7 @@
                 <label for="email">
                     <img src="../../assets/images/user-icon.svg" alt="ícone de usuário">
                 </label>
-                <input type="email" name="email" id="email" placeholder="Email" required>
+                <input  type="email" name="email" id="email" placeholder="Email" required>
             </div>
 
             <div id="form-senha">
@@ -23,7 +23,7 @@
                 <input  type="password" name="senha" id="senha" placeholder="Senha" required>
             </div>
 
-            <input type="submit" value="Entrar" id="form-botao">
+            <input type="submit" value="Entrar" id="form-botao" (click)="logIn()">
         </form>
     </div>
 </div>
@@ -31,5 +31,4 @@
 <!-- 
 [(ngModel)]="user.email"
 [(ngModel)]="user.password"
-(click)="logIn()"
 -->

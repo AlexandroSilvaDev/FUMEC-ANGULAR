@@ -1,7 +1,8 @@
 import { Component } from '@angular/core';
-import { Users } from '../../model/users.model';
+
 import { UserService } from '../../services/user.service';
 import { Router } from '@angular/router';
+import { FormBuilder, FormGroup } from '@angular/forms';
 
 @Component({
   selector: 'app-delete-page',
@@ -9,20 +10,20 @@ import { Router } from '@angular/router';
   styleUrls: ['./delete-page.component.css'],
 })
 export class DeletePageComponent {
-  // public user: Users = {
-  //   id: 0,
-  //   email: '',
-  //   password: '',
-  //   level: 0,
-  //   team: '',
-  //   name: '',
-  //   photo: '',
-  // };
+  deleteForm: FormGroup;
 
-  // constructor(private userService: UserService, private route: Router) {}
+  constructor(private userService: UserService,
+              private formBuilder: FormBuilder,
+              private route: Router) {
+    this.deleteForm = this.formBuilder.group({
+      id: ['']
+    });
+  }
 
-  // public register() {
-  //   this.userService.addUser(this.user);
-  //   this.route.navigate(['/manager-page']);
-  // }
+  public delete() {
+    const id = this.deleteForm.get('id')?.value;
+    this.userService.delete(id).subscribe((user) => {
+      this.route.navigate(['/manager-page']);
+    });
+  }
 }

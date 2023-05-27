@@ -1,1 +1,53 @@
-<p>update-page works!</p>
+<title>Página de atualização</title>
+
+<div id="conteudo">
+    <div id="form-register">
+        <div id="titulo-subtitulo">
+            <h1>Atualização</h1>
+            <h2>Por favor, digite o ID e preencha os campos abaixo com os dados que deseja atualizar</h2>
+        </div>
+    
+        <form action="" id="form-login-senha" [formGroup]="myForm">
+            <div id="usuario">
+                <label for="id">
+                    <img src="../../assets/images/user-icon.svg" alt="ícone de usuário">
+                </label>
+                <input type="text" name="id" id="id" placeholder="ID" formControlName="id">
+            </div>
+
+            <input type="submit" value="Buscar" id="form-botao" (click)="searchUser()">
+            
+            <div id="usuario">
+                <label for="name">
+                    <img src="../../assets/images/user-icon.svg" alt="ícone de usuário">
+                </label>
+                <input formControlName="name" type="text" name="name" id="name">
+            </div>
+    
+            <div id="usuario">
+                <label for="email">
+                    <img src="../../assets/images/email-icon.svg" alt="ícone de usuário">
+                </label>
+                <input formControlName="email" type="email" name="email" id="email">
+            </div>
+    
+            <div id="form-senha">
+                <label for="senha">
+                    <img src="../../assets/images/pass-icon.svg" alt="Ícone de senha">
+                </label>
+                <input formControlName="password" type="password" name="senha" id="senha">
+            </div>
+    
+            <div id="usuario">
+                <label for="team">
+                    <img src="../../assets/images/team-icon.svg" alt="Ícone de senha">
+                </label>
+                <input formControlName="team" type="text" name="team" id="team" placeholder="Equipe">
+            </div>
+    
+            <input type="submit" value="Atualizar" id="form-botao" >
+        </form>
+    </div>
+</div>
+
+<!-- (click)="update()" -->
