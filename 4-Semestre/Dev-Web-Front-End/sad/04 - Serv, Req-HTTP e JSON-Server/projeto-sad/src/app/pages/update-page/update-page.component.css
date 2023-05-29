@@ -1,11 +1,10 @@
-#conteudo {
+#container {
+    position: relative;
+    width: 100%;
     height: 100vh;
-    font-size: 100%;
     display: flex;
-    flex-direction: row;
     justify-content: center;
     align-items: center;
-    gap: 50px;
 }
 
 h1 {
@@ -13,6 +12,19 @@ h1 {
     font-weight: 700;
     font-size: 28px;
     text-align: center;
+    margin-bottom: 20px;
+}
+
+#forms {
+    display: flex;
+    align-items: center;
+    gap: 50px;
+}
+
+.input img {
+    height: 30px;
+    margin: 0px 5px 0px 5px;
+    padding: 5px;
 }
 
 h2 {
@@ -21,32 +33,19 @@ h2 {
     font-size: 13px;
     color: #818181;
     text-align: center;
+    margin-bottom: 5px;
 }
 
-#form-register {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-#form-delete {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-#titulo-subtitulo {
+.input {
+    border: 1px solid #d1d1d1;
     width: 270px;
+    border-radius: 8px;
     margin-bottom: 10px;
-}
-
-#form-login-senha {
     display: flex;
-    flex-direction: column;
     align-items: center;
 }
 
-#id, #email, #senha, #name, #team{
+input {
     border: 0;
     height: 48px;
     width: 270px;
@@ -55,34 +54,10 @@ h2 {
     outline: none;
 }
 
-#usuario {
-    border: 1px solid #d1d1d1;
-    width: 270px;
-    border-radius: 8px;
-    margin-bottom: 10px;
+#form-search, #form-data {
     display: flex;
+    flex-direction: column;
     align-items: center;
-}
-
-#form-senha {
-    border: 1px solid #d1d1d1;
-    width: 270px;
-    border-radius: 8px;
-    margin-bottom: 10px;
-    display: flex;
-    align-items: center;
-}
-
-#form-register img {
-    height: 30px;
-    margin: 0px 5px 0px 5px;
-    padding: 5px;
-}
-
-#form-delete img {
-    height: 30px;
-    margin: 0px 5px 0px 5px;
-    padding: 5px;
 }
 
 #form-botao {
@@ -103,4 +78,81 @@ h2 {
 #form-botao:hover {
     background-color: #16682f;
     cursor: pointer;
+}
+
+/*EMBLEMA*/
+#card {
+    background-color: #66CB55;
+    height: 180px;
+    width: 110px;
+    border-radius: 0 0 100px 100px;
+    display: inline-block;
+    margin: 0px 10px 20px 10px;
+    cursor: pointer;
+    transition: 200ms linear;
+}
+
+#card-cabecalho {
+    background-color: #D9D9D9;
+    height: 20px;
+    width: 110px;
+}
+
+#card-corpo-topo {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    padding: 0px 10px 0px 10px;
+}
+
+#card-descricao1 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-family: 'Roboto', sans-serif;
+    font-size: 23px;
+}
+
+#card-descricao1-nivel {
+    font-weight: 700;
+}
+
+#card-descricao1-equipe {
+    font-weight: 400;
+}
+
+#card-descricao2 {
+    color: white;
+    font-family: 'Roboto', sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+#card-descricao2-nome {
+    font-size: 18px;
+    font-weight: 700;
+    margin-bottom: 5px;
+}
+
+#card-descricao2-atributos {
+    display: flex;
+    flex-direction: row;
+    font-size: 10px;
+    gap: 10px;
+}
+
+#card-desc2-atributos-col1 {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+}
+
+#card-desc2-atributos-col2 {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
 }

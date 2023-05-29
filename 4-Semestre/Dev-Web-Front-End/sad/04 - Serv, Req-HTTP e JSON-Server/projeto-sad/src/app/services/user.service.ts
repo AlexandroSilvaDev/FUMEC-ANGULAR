@@ -44,4 +44,8 @@ export class UserService {
   public getUser(id: number): Observable<any> {
     return this.http.get<any[]>('http://localhost:3000/users').pipe(map(users => users.find(user => user.id === id)))
   }
+
+  public getUserByName(name: string): Observable<any> {
+    return this.http.get<any[]>('http://localhost:3000/users?name=' + name);
+  }
 }

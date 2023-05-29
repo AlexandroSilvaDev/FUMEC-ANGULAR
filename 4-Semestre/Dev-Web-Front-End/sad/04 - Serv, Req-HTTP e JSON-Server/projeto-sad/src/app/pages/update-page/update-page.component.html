@@ -1,53 +1,102 @@
 <title>Página de atualização</title>
 
-<div id="conteudo">
-    <div id="form-register">
-        <div id="titulo-subtitulo">
-            <h1>Atualização</h1>
-            <h2>Por favor, digite o ID e preencha os campos abaixo com os dados que deseja atualizar</h2>
-        </div>
+<div id="container">
+    <div id="content">
+        <h1>Atualização</h1>
     
-        <form action="" id="form-login-senha" [formGroup]="myForm">
-            <div id="usuario">
-                <label for="id">
-                    <img src="../../assets/images/user-icon.svg" alt="ícone de usuário">
-                </label>
-                <input type="text" name="id" id="id" placeholder="ID" formControlName="id">
-            </div>
-
-            <input type="submit" value="Buscar" id="form-botao" (click)="searchUser()">
+        <div id="forms">
+            <div id="form-search">
+                <div id="card" *ngIf="searchResult">
+                    <div id="card-cabecalho">
+                    </div>
+                    <div id="card-corpo">
+                        <div id="card-corpo-topo">
+                            <div id="card-descricao1">
+                                <div id="card-descricao1-nivel">
+                                    {{searchResult.level}}
+                                </div>
+                                <div id="card-descricao1-equipe">
+                                    {{searchResult.team}}
+                                </div>
+                            </div>
+                            <img src="../../../assets/images/Fotologo.svg" alt="Foto do perfil">
+                        </div>
+                        <div id="card-descricao2">
+                            <div id="card-descricao2-nome">
+                                {{searchResult.name}}
+                            </div>
+                            <div id="card-descricao2-atributos">
+                                <div id="card-desc2-atributos-col1">
+                                    <div class="card-desc2-atributos" id="atributo1">
+                                        <strong>91</strong> TCS
+                                    </div>
+                                    <div class="card-desc2-atributos" id="atributo2">
+                                        <strong>91</strong> TCS
+                                    </div>
+                                    <div class="card-desc2-atributos" id="atributo3">
+                                        <strong>91</strong> TCS
+                                    </div>
+                                </div>
             
-            <div id="usuario">
-                <label for="name">
-                    <img src="../../assets/images/user-icon.svg" alt="ícone de usuário">
-                </label>
-                <input formControlName="name" type="text" name="name" id="name">
+                                <div id="card-desc2-atributos-col2">
+                                    <div class="card-desc2-atributos" id="atributo4">
+                                        <strong>91</strong> TCS
+                                    </div>
+                                    <div class="card-desc2-atributos" id="atributo5">
+                                        <strong>91</strong> TCS
+                                    </div>
+                                    <div class="card-desc2-atributos" id="atributo6">
+                                        <strong>91</strong> TCS
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <h2>Por favor, digite o nome do usuário</h2>
+                <div class="input">
+                    <label for="id">
+                        <img src="../../assets/images/user-icon.svg" alt="ícone de usuário">
+                    </label>
+                    <input type="text" [(ngModel)]="searchTerm" (keyup.enter)="searchUser()" name="id" id="id" placeholder="ID">
+                </div>
+                <input type="submit" value="Buscar" id="form-botao" (click)="searchUser()">
             </div>
     
-            <div id="usuario">
-                <label for="email">
-                    <img src="../../assets/images/email-icon.svg" alt="ícone de usuário">
-                </label>
-                <input formControlName="email" type="email" name="email" id="email">
-            </div>
-    
-            <div id="form-senha">
-                <label for="senha">
-                    <img src="../../assets/images/pass-icon.svg" alt="Ícone de senha">
-                </label>
-                <input formControlName="password" type="password" name="senha" id="senha">
-            </div>
-    
-            <div id="usuario">
-                <label for="team">
-                    <img src="../../assets/images/team-icon.svg" alt="Ícone de senha">
-                </label>
-                <input formControlName="team" type="text" name="team" id="team" placeholder="Equipe">
-            </div>
-    
-            <input type="submit" value="Atualizar" id="form-botao" >
-        </form>
+            <form action="" id="form-data">
+                <h2>Preencha os campos abaixo com os <br> dados que deseja atualizar</h2>
+
+                <div class="input">
+                    <label for="name">
+                        <img src="../../assets/images/user-icon.svg" alt="ícone de usuário">
+                    </label>
+                    <input type="text" name="name" id="name" [(ngModel)]="searchResult.name" placeholder="Nome">
+                </div>
+
+                <div class="input">
+                    <label for="email">
+                        <img src="../../assets/images/email-icon.svg" alt="ícone de usuário">
+                    </label>
+                    <input type="email" name="email" id="email" [(ngModel)]="searchResult.email" placeholder="Email">
+                </div>
+
+                <div class="input">
+                    <label for="password">
+                        <img src="../../assets/images/pass-icon.svg" alt="Ícone de senha">
+                    </label>
+                    <input type="password" name="password" id="password" [(ngModel)]="searchResult.password" placeholder="Senha">
+                </div>
+
+                <div class="input">
+                    <label for="team">
+                        <img src="../../assets/images/team-icon.svg" alt="Ícone de senha">
+                    </label>
+                    <input type="text" name="team" id="team" [(ngModel)]="searchResult.team" placeholder="Equipe">
+                </div>
+
+                <input type="submit" value="Atualizar" id="form-botao" (click)="update()">
+            </form>
+        </div>
     </div>
 </div>
-
-<!-- (click)="update()" -->

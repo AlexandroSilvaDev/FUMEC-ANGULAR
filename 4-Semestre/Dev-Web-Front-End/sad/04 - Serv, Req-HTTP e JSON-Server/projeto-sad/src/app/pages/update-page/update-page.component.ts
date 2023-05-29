@@ -1,9 +1,8 @@
 import { Component } from '@angular/core';
 
+import { UserService } from 'src/app/services/user.service';
 import { Router } from '@angular/router';
 import { Users, createUser } from 'src/app/model/users.model';
-import { UserService } from 'src/app/services/user.service';
-import { FormBuilder, FormGroup } from '@angular/forms';
 
 @Component({
   selector: 'app-update-page',
@@ -11,36 +10,24 @@ import { FormBuilder, FormGroup } from '@angular/forms';
   styleUrls: ['./update-page.component.css']
 })
 export class UpdatePageComponent {
-  // public user: Users = createUser();
-  myForm: FormGroup;
+  searchTerm: string = "";
+  searchResult: any;
+  // searchResult: Users = createUser();
 
   constructor(private userService: UserService,
-              private formBuilder: FormBuilder,
               private route: Router) {
-    this.myForm = this.formBuilder.group({
-      id: [''],
-      email: [''],
-      password: [''],
-      // level: [''],
-      team: [''],
-      name: [''],
-      // photo: [''],
-    });
+    
   }
 
   public searchUser() {
-    const id = this.myForm.get('id')?.value;
-    this.userService.getUser(id).subscribe((user) => {
-      // this.user = user;
-      this.myForm.patchValue(user);
-      console.log(user);
-      
-    });
+    this.userService.getUserByName(this.searchTerm).subscribe((result) => {
+      this.searchResult = result;
+    })
   }
 
-  // public update() {
-  //   this.userService.update(this.user).subscribe((user) => {
-  //     this.route.navigate(['/manager-page']);
-  //   });
-  // }
+  public update() {
+    this.userService.update(this.searchResult).subscribe((user) => {
+      this.route.navigate(['/manager-page']);
+    });
+  }
 }

@@ -73,10 +73,19 @@
       "photo": ""
     },
     {
-      "id": 9,
+      "id": 10,
+      "email": "vitor@fumec.br",
+      "password": "123",
+      "level": 0,
+      "team": "N2",
+      "name": "Vitor",
+      "photo": ""
+    },
+    {
+      "id": 11,
       "email": "rilbert@fumec.br",
       "password": "123",
-      "level": 84,
+      "level": 0,
       "team": "N2",
       "name": "Rilbert",
       "photo": ""
