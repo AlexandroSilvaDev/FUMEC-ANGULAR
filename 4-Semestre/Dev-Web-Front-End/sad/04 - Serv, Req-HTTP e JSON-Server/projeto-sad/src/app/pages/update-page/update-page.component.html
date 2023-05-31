@@ -2,7 +2,7 @@
 
 <div id="container">
     <div id="content">
-        <h1>Atualização</h1>
+        <h1>Atualizar</h1>
     
         <div id="forms">
             <div id="form-search">
@@ -56,10 +56,10 @@
 
                 <h2>Por favor, digite o nome do usuário</h2>
                 <div class="input">
-                    <label for="id">
+                    <label for="name-search">
                         <img src="../../assets/images/user-icon.svg" alt="ícone de usuário">
                     </label>
-                    <input type="text" [(ngModel)]="searchTerm" (keyup.enter)="searchUser()" name="id" id="id" placeholder="ID">
+                    <input type="text" [(ngModel)]="searchTerm" (keyup.enter)="searchUser()" name="name-search" placeholder="Nome">
                 </div>
                 <input type="submit" value="Buscar" id="form-botao" (click)="searchUser()">
             </div>
