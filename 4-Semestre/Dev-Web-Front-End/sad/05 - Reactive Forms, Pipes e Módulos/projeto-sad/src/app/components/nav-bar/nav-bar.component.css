@@ -1,0 +1,25 @@
+/*BARRA DE NAVEGAÇÃO*/
+nav {
+    background-color: #66CB55;
+}
+
+#bar {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5px;
+}
+
+#pages {
+    display: flex;
+    flex-direction: row;
+}
+
+p {
+    font-size: 16px;
+    color: white;
+    font-weight: 700;
+    cursor: pointer;
+    margin: 0px 5px 0px 5px;
+}

@@ -1,0 +1,153 @@
+<title>Dashboard</title>
+
+<div id="principal">
+    <div id="card" *ngIf="user">
+        <div id="card-cabecalho">
+        </div>
+        <div id="card-corpo">
+            <div id="card-corpo-topo">
+                <div id="card-descricao1">
+                    <div id="card-descricao1-nivel">
+                        {{user.level}}
+                    </div>
+                    <div id="card-descricao1-equipe">
+                        {{user.team}}
+                    </div>
+                </div>
+                <img src="../../../assets/images/Fotologo.svg" alt="Foto do perfil">
+            </div>
+            <div id="card-descricao2">
+                <div id="card-descricao2-nome">
+                    {{user.name}}
+                </div>
+                <div id="card-descricao2-atributos">
+                    <div id="card-desc2-atributos-col1">
+                        <div class="card-desc2-atributos" id="atributo1">
+                            <strong>91</strong> TCS
+                        </div>
+                        <div class="card-desc2-atributos" id="atributo2">
+                            <strong>91</strong> TCS
+                        </div>
+                        <div class="card-desc2-atributos" id="atributo3">
+                            <strong>91</strong> TCS
+                        </div>
+                    </div>
+
+                    <div id="card-desc2-atributos-col2">
+                        <div class="card-desc2-atributos" id="atributo4">
+                            <strong>91</strong> TCS
+                        </div>
+                        <div class="card-desc2-atributos" id="atributo5">
+                            <strong>91</strong> TCS
+                        </div>
+                        <div class="card-desc2-atributos" id="atributo6">
+                            <strong>91</strong> TCS
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="conteudo">
+        <div id="descricao">
+            <div id="descricao-nivel">
+                Nível
+                <div id="nivel">
+                    <strong>92</strong>
+                </div>
+            </div>
+    
+    
+            <div id="progresso">
+                <div id="progresso-bar">
+    
+                </div>
+                <div id="progresso-conteudo">
+                    <div id="progresso-descricao">
+                        Exp. necessária para o próx nível:
+                    </div>
+                    <div id="progresso-nivel">
+                        19.8%
+                    </div>
+                </div>
+            </div>
+        </div>
+    
+        <div id="tabela">
+            <table>
+                <tr id="linha-1">
+                    <td><strong>Descrição</strong></td>
+                    <td class="col-valores"><strong>Total</strong></td>
+                    <td class="col-valores"><strong>Pontuação</strong></td>
+                </tr>
+                <tr>
+                    <td>Total de chamado solucionados</td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td><img src="" alt=""> Pontuação de chamados triados dentro da SLA</td>
+                    <td></td>
+                    <td></td>
+                </tr>
+    
+                <tr>
+                    <td>Chamados não triados dentro da SLA</td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td><img src="" alt=""> Pontuação de chamados atendidos dentro da SLA</td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>Chamados não atendidos dentro da SLA</td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td><img src="" alt=""> Pontuação de chamados solucionados dentro da SLA</td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>Chamados não solucionados dentro da SLA</td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td><img src="" alt=""> Quantidade total de chamados solucionados por tipo</td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td><img src="" alt=""> Computadores</td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td><img src="" alt=""> Redes e Voz</td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td><img src="" alt=""> Automação</td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td><img src="" alt=""> Aplicações</td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td><img src="" alt=""> Periféricos e Suprimentos</td>
+                    <td></td>
+                    <td></td>
+                </tr>
+            </table>
+        </div>
+    </div>
+</div>

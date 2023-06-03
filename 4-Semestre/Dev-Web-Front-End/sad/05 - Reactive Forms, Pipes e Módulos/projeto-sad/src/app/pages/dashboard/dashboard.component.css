@@ -1,0 +1,171 @@
+/*CONTEUDO*/
+#principal {
+    width: 810px;
+    margin-top: 10px;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+#conteudo {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
+
+/*NÍVEL E BARRA DE PROGRESSO*/
+#descricao {
+    display: flex;
+    flex-direction: column;
+}
+
+#descricao-nivel {
+    font-family: 'Roboto', sans-serif;
+    font-size: 40px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+}
+
+#progresso {
+    background-color: #ccc;
+    width: 200px;
+    height: 15px;
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 1px;
+}
+
+#progresso-bar {
+    background-color: #66CB55;
+    width: 50%;
+}
+
+#progresso-conteudo {
+    position: absolute;
+    font-family: 'Roboto', sans-serif;
+    font-size: 10px;
+    font-weight: 700;
+    color: white;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 2px;
+}
+
+/*TABELA*/
+#tabela {
+    margin-top: 10px;
+    height: 120px;
+    width: 690px;
+}
+
+table {
+    width: 690px;
+    font-family: 'Roboto', sans-serif;
+    font-size: 12px;
+    border-collapse: collapse;
+}
+
+td {
+    border: 1px solid black;
+    padding: 8px;
+}
+
+tr:nth-child(2n) {
+    background-color: lightgray;
+}
+
+#linha-1 td {
+    background-color: #66CB55;
+    color: white;
+    border: 0px;
+    text-align: center;
+}
+
+.col-valores {
+    width: 100px;
+}
+
+/*EMBLEMA*/
+#card {
+    background-color: #66CB55;
+    height: 180px;
+    width: 110px;
+    border-radius: 0 0 100px 100px;
+    display: inline-block;
+    margin: 0px 10px 20px 10px;
+    cursor: pointer;
+    transition: 200ms linear;
+}
+
+#card-cabecalho {
+    background-color: #D9D9D9;
+    height: 20px;
+    width: 110px;
+}
+
+#card-corpo-topo {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    padding: 0px 10px 0px 10px;
+}
+
+#card-descricao1 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-family: 'Roboto', sans-serif;
+    font-size: 23px;
+}
+
+#card-descricao1-nivel {
+    font-weight: 700;
+}
+
+#card-descricao1-equipe {
+    font-weight: 400;
+}
+
+#card-descricao2 {
+    color: white;
+    font-family: 'Roboto', sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+#card-descricao2-nome {
+    font-size: 18px;
+    font-weight: 700;
+    margin-bottom: 5px;
+}
+
+#card-descricao2-atributos {
+    display: flex;
+    flex-direction: row;
+    font-size: 10px;
+    gap: 10px;
+}
+
+#card-desc2-atributos-col1 {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+}
+
+#card-desc2-atributos-col2 {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+}

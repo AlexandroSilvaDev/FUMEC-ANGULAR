@@ -1,0 +1,129 @@
+<title>Página do gestor</title>
+
+<div id="conteudo">
+    <div id="settings-bar">
+        <div id="buttons">
+            <input type="submit" value="Registrar" class="button" id="register-button" routerLink="/register-page">
+            <input type="submit" value="Remover" class="button" id="delete-button" routerLink="/delete-page">
+            <input type="submit" value="Atualizar" class="button" id="update-button" routerLink="/update-page">
+        </div>
+        <div id="search-bar">
+            <label for="search"></label>
+            <input type="search" name="search" id="search" placeholder="Pesquisar">
+        </div>
+    </div>
+
+    <div id="equipe1">
+        <h1>N1</h1>
+        <div id="cards">
+            <ng-container *ngFor="let user of users">
+                <div id="card" *ngIf="user.team == 'N1'">
+                    <a [routerLink]="['/dashboard', user.id]">
+                        <div id="card-cabecalho">
+                        </div>
+                        <div id="card-corpo">
+                            <div id="card-corpo-topo">
+                                <div id="card-descricao1">
+                                    <div id="card-descricao1-nivel">
+                                        {{user.level}}
+                                    </div>
+                                    <div id="card-descricao1-equipe">
+                                        {{user.team}}
+                                    </div>
+                                </div>
+                                <img src="../../../assets/images/Fotologo.svg" alt="Foto do perfil">
+                            </div>
+                            <div id="card-descricao2">
+                                <div id="card-descricao2-nome">
+                                    {{user.name}}
+                                </div>
+                                <div id="card-descricao2-atributos">
+                                    <div id="card-desc2-atributos-col1">
+                                        <div class="card-desc2-atributos" id="atributo1">
+                                            <strong>91</strong> TCS
+                                        </div>
+                                        <div class="card-desc2-atributos" id="atributo2">
+                                            <strong>91</strong> TCS
+                                        </div>
+                                        <div class="card-desc2-atributos" id="atributo3">
+                                            <strong>91</strong> TCS
+                                        </div>
+                                    </div>
+                
+                                    <div id="card-desc2-atributos-col2">
+                                        <div class="card-desc2-atributos" id="atributo4">
+                                            <strong>91</strong> TCS
+                                        </div>
+                                        <div class="card-desc2-atributos" id="atributo5">
+                                            <strong>91</strong> TCS
+                                        </div>
+                                        <div class="card-desc2-atributos" id="atributo6">
+                                            <strong>91</strong> TCS
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            </ng-container>
+        </div>
+    </div>
+
+    <div id="equipe2">
+        <h1>N2</h1>
+        <div id="cards">
+            <ng-container *ngFor="let user of users">
+                <div id="card" *ngIf="user.team == 'N2'">
+                    <a [routerLink]="['/dashboard', user.id]">
+                        <div id="card-cabecalho">
+                        </div>
+                        <div id="card-corpo">
+                            <div id="card-corpo-topo">
+                                <div id="card-descricao1">
+                                    <div id="card-descricao1-nivel">
+                                        {{user.level}}
+                                    </div>
+                                    <div id="card-descricao1-equipe">
+                                        {{user.team}}
+                                    </div>
+                                </div>
+                                <img src="../../../assets/images/Fotologo.svg" alt="Foto do perfil">
+                            </div>
+                            <div id="card-descricao2">
+                                <div id="card-descricao2-nome">
+                                    {{user.name}}
+                                </div>
+                                <div id="card-descricao2-atributos">
+                                    <div id="card-desc2-atributos-col1">
+                                        <div class="card-desc2-atributos" id="atributo1">
+                                            <strong>91</strong> TCS
+                                        </div>
+                                        <div class="card-desc2-atributos" id="atributo2">
+                                            <strong>91</strong> TCS
+                                        </div>
+                                        <div class="card-desc2-atributos" id="atributo3">
+                                            <strong>91</strong> TCS
+                                        </div>
+                                    </div>
+            
+                                    <div id="card-desc2-atributos-col2">
+                                        <div class="card-desc2-atributos" id="atributo4">
+                                            <strong>91</strong> TCS
+                                        </div>
+                                        <div class="card-desc2-atributos" id="atributo5">
+                                            <strong>91</strong> TCS
+                                        </div>
+                                        <div class="card-desc2-atributos" id="atributo6">
+                                            <strong>91</strong> TCS
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            </ng-container>
+        </div>
+    </div>
+</div>

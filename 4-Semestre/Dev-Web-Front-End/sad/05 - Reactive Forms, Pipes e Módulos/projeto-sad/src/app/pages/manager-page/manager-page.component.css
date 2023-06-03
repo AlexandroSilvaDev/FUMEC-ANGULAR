@@ -1,0 +1,167 @@
+#conteudo {
+    width: 810px;
+    margin-top: 10px;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    flex-direction: column;
+}
+
+h1 {
+    margin: 20px 0px 20px 0px;
+    font-family: 'Roboto', sans-serif;
+    font-size: 40px;
+}
+
+#equipe1 {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+
+#equipe2 {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+
+#settings-bar {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 30px;
+}
+
+.button {
+    padding: 15px;
+    border-radius: 8px;
+    border: 0;
+    font-weight: 600;
+    font-size: 14px;
+    color: white;
+    cursor: pointer;
+}
+
+#buttons {
+    display: flex;
+    gap: 15px;
+}
+
+input {
+    padding: 15px;
+    border-radius: 8px;
+    border: 0;
+    font-weight: 600;
+    font-size: 14px;
+}
+
+#register-button {
+    background-color: #28A94F;
+    
+}
+
+#delete-button {
+    background-color: #c02e23;
+}
+
+#update-button {
+    background-color: #265cc2;
+}
+
+#register-button:hover {
+    background-color: #16682f;
+}
+
+#delete-button:hover {
+    background-color: #851f18;
+}
+
+#update-button:hover {
+    background-color: #153570;
+}
+
+#search-bar {
+    border: 1px solid #28A94F;
+    border-radius: 8px;
+    cursor: text;
+}
+
+/*EMBLEMA*/
+#cards {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+#card {
+    background-color: #66CB55;
+    height: 180px;
+    width: 110px;
+    border-radius: 0 0 100px 100px;
+    margin: 0px 10px 20px 10px;
+    cursor: pointer;
+    transition: 200ms linear;
+}
+
+#card-cabecalho {
+    background-color: #D9D9D9;
+    height: 20px;
+    width: 110px;
+}
+
+#card-corpo-topo {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    padding: 0px 10px 0px 10px;
+}
+
+#card-descricao1 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-family: 'Roboto', sans-serif;
+    font-size: 23px;
+}
+
+#card-descricao1-nivel {
+    font-weight: 700;
+}
+
+#card-descricao1-equipe {
+    font-weight: 400;
+}
+
+#card-descricao2 {
+    color: white;
+    font-family: 'Roboto', sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+#card-descricao2-nome {
+    font-size: 18px;
+    font-weight: 700;
+    margin-bottom: 5px;
+}
+
+#card-descricao2-atributos {
+    display: flex;
+    flex-direction: row;
+    font-size: 10px;
+    gap: 10px;
+}
+
+#card-desc2-atributos-col1 {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+}
+
+#card-desc2-atributos-col2 {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+}

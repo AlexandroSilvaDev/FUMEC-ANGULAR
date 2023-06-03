@@ -1,0 +1,24 @@
+<title>Página de exclusão</title>
+
+<div id="conteudo">
+    <div id="form-delete">
+        <div id="titulo-subtitulo">
+            <h1>Remover</h1>
+            <h2>Por favor, digite o ID do usuário que deseja remover</h2>
+        </div>
+    
+        <form action="" id="form-login-senha" [formGroup]="deleteForm" (ngSubmit)="delete()">
+            <div id="usuario">
+                <label for="id">
+                    <img src="../../assets/images/user-icon.svg" alt="ícone de usuário">
+                </label>
+                <input type="text" name="id" id="id" placeholder="ID" formControlName="id">
+            </div>
+    
+            <input type="submit" value="Remover" id="form-botao">
+        </form>
+    </div>
+</div>
+
+<!-- [(ngModel)]="user.id" 
+(click)="delete()"-->
