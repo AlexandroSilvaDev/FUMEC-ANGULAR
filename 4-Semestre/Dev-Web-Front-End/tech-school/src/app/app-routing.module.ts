@@ -4,6 +4,8 @@ import { CursoComponent } from './pages/curso/curso.component';
 import { HomeComponent } from './pages/home/home.component';
 import { CursoNovoComponent } from './pages/curso-novo/curso-novo.component';
 import { CursoDetalhesComponent } from './pages/curso-detalhes/curso-detalhes.component';
+import { LoginComponent } from './pages/login/login.component';
+import { RegisterComponent } from './pages/register/register.component';
 
 const routes: Routes = [
   {
@@ -26,6 +28,14 @@ const routes: Routes = [
   {
     path: 'curso-detalhes/:id',
     component: CursoDetalhesComponent
+  },
+  {
+    path: 'login',
+    component: LoginComponent
+  },
+  {
+    path: 'registrar',
+    component: RegisterComponent
   }
 ];
 

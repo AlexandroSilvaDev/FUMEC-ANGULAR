@@ -9,9 +9,8 @@ import { HttpClient } from '@angular/common/http';
 })
 export class AuthService {
   private usersUrl = 'http://localhost:3000/users';
-  private canLog: boolean = false;
   showMenuEmitter = new EventEmitter<boolean>();
-  isManagerEmitter = new EventEmitter<boolean>();
+  public isManager: boolean = false;
 
   constructor(private router: Router,
               private  http: HttpClient) { 
@@ -23,14 +22,14 @@ export class AuthService {
       map((users: any) => {
         const foundUser = users.find((user: { email: string; password: string; }) => user.email === email && user.password === password);
         if (foundUser) {
-          this.canLog == true;
           this.showMenuEmitter.emit(true);
 
           if (foundUser.name === 'Thiago' || foundUser.name === 'Alexandro' || foundUser.name === 'Raian' || foundUser.name === 'Vitor') {
             this.router.navigate(['/manager-page/']);
-            this.isManagerEmitter.emit(true);
+            this.isManager = true;
           } else {
             this.router.navigate(['/dashboard/' + foundUser.id]);
+            this.isManager = false;
           }
 
           return { success: true, user: foundUser };
@@ -43,6 +42,5 @@ export class AuthService {
 
   logout() {
     this.showMenuEmitter.emit(false);
-    this.canLog = false;
   }
 }

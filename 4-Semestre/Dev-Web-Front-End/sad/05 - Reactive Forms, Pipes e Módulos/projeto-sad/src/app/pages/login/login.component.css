@@ -28,7 +28,6 @@ h2 {
 
 #titulo-subtitulo {
     width: 270px;
-    margin-bottom: 10px;
 }
 
 #form-login-senha {
@@ -46,11 +45,14 @@ h2 {
     outline: none;
 }
 
-#usuario {
+form > div {
+    margin-top: 10px;
+}
+
+#form-usuario {
     border: 1px solid #d1d1d1;
     width: 270px;
     border-radius: 8px;
-    margin-bottom: 10px;
     display: flex;
     align-items: center;
 }
@@ -59,7 +61,6 @@ h2 {
     border: 1px solid #d1d1d1;
     width: 270px;
     border-radius: 8px;
-    margin-bottom: 10px;
     display: flex;
     align-items: center;
 }
@@ -83,6 +84,7 @@ h2 {
     font-weight: 600;
     font-size: 14px;
     color: white;
+    margin-top: 10px;
 }
 
 #form-botao:hover {

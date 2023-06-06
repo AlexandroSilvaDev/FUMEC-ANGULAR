@@ -1,8 +1,8 @@
 <nav>
     <div id="bar">
         <div id="pages">
-            <p *ngIf="isManager" routerLink="/manager-page" class="show-link" id="show-link">Pág. do gestor</p>
+            <a *ngIf="showLink" routerLink="/manager-page">Pág. do gestor</a>
         </div>
-        <p routerLink="/login" (click)="logout()">Sair</p>
-    </div>  
+        <a routerLink="/login" (click)="logout()">Sair</a>
+    </div>
 </nav>

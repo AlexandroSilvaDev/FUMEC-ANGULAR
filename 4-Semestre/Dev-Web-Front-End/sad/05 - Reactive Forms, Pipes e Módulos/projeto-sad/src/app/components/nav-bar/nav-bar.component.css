@@ -16,7 +16,7 @@ nav {
     flex-direction: row;
 }
 
-p {
+a {
     font-size: 16px;
     color: white;
     font-weight: 700;

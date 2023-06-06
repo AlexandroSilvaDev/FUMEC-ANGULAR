@@ -19,8 +19,6 @@ export class ManagerPageComponent implements OnInit{
   ngOnInit(): void {
     this.userService.getAll().subscribe((users: Users[]) => {
       this.users = users;
-
-      console.log(this.users);
     });
   }
 }

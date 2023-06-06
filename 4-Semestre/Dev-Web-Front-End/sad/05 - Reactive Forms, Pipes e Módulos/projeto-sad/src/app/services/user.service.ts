@@ -38,7 +38,7 @@ export class UserService {
 
   public update(user: Users) {
     const userJSON = JSON.stringify(user);
-    return this.http.put('http://localhost:3000/users/'+user.id, userJSON, httpOptions);
+    return this.http.put('http://localhost:3000/users/' + user.id, userJSON, httpOptions);
   }
 
   public getUser(id: number): Observable<any> {

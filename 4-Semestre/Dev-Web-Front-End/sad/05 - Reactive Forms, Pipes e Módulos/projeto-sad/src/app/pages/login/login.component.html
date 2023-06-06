@@ -8,14 +8,13 @@
             <h2>Por favor, entre com seu login e senha</h2>
         </div>
 
-        <form action="" id="form-login-senha" [formGroup]="formLogin" (ngSubmit)="onSubmit()">
-            <div id="usuario">
+        <form action="" #form="ngForm" id="form-login-senha" [formGroup]="formLogin" (ngSubmit)="onSubmit()">
+            <div id="form-usuario">
                 <label for="email">
                     <img src="../../assets/images/user-icon.svg" alt="ícone de usuário">
                 </label>
                 <input  type="email" name="email" id="email" placeholder="Email" formControlName="email">
             </div>
-
             <div id="form-senha">
                 <label for="senha">
                     <img src="../../assets/images/pass-icon.svg" alt="Ícone de senha">
@@ -23,7 +22,7 @@
                 <input  type="password" name="senha" id="senha" placeholder="Senha" formControlName="password">
             </div>
 
-            <input type="submit" value="Entrar" id="form-botao" [disabled]="formLogin.invalid">
+            <button type="submit" id="form-botao" [disabled]="formLogin.invalid">Entrar</button>
         </form>
     </div>
 </div>

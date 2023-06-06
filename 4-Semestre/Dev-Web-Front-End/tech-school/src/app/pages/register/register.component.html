@@ -1,1 +1,72 @@
-<p>register works!</p>
+
+<div class="row justify-content-center mt-5">
+    <div class="col-9">
+        <form #form="ngForm" [formGroup]="alunoForm"
+        (ngSubmit)="registrar()">
+            <div class="mb-3">
+                <label for="nome" 
+                class="form-label">Nome</label>
+                <input type="text" class="form-control" 
+                id="nome" name="nome" formControlName="nome">
+
+                <div class="alert alert-danger mt-1"
+                *ngIf="
+                (
+                alunoForm.get('nome')?.errors?.['required'] ||
+                alunoForm.get('nome')?.errors?.['minlength'] ||
+                alunoForm.get('nome')?.errors?.['maxlength']) &&
+                form.submitted
+                ">
+                 Informe o nome do usuário que tenha de 3 até 150 caracteres!
+                </div>
+
+
+            </div>
+
+            <div class="mb-3">
+              <label for="email" 
+              class="form-label">Email</label>
+              <input type="email" class="form-control"
+               id="email" name="email" 
+               formControlName="email">
+
+
+               <div class="alert alert-danger mt-1"
+               *ngIf="(alunoForm.get('email')?.errors?.['required'] || 
+                        alunoForm.get('email')?.errors?.['email']) &&
+                        form.submitted">
+                Informe o e-mail corretamente!
+               </div>
+
+
+            </div>
+
+            <div class="mb-3">
+              <label for="senha" 
+              class="form-label">Senha</label>
+              <input type="password" class="form-control" 
+              id="senha" name="senha">
+            </div>
+
+            <div class="mb-3">
+                <label for="senhaC" 
+                class="form-label">Confirmar Senha</label>
+                <input type="password" class="form-control" 
+                id="senhaC" name="senhaC">
+            </div>
+
+            <div class="mb-3">
+                <label for="idade" 
+                class="form-label">Idade</label>
+                <input type="number" class="form-control"
+                 id="idade" name="idade">
+            </div>
+            
+
+            <button type="submit" class="btn btn-primary">
+                Registrar
+            </button>
+        </form>
+    </div>
+</div>
+

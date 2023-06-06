@@ -5,25 +5,27 @@
         <h1>Atualizar</h1>
     
         <div id="forms">
-            <div id="form-search">
-                <div id="card" *ngIf="searchResult">
+
+            <form id="form-search" #form="ngForm" [formGroup]="searchForm" (ngSubmit)="searchUser(userName.value)">
+
+                <div id="card" *ngIf="foundUser">
                     <div id="card-cabecalho">
                     </div>
                     <div id="card-corpo">
                         <div id="card-corpo-topo">
                             <div id="card-descricao1">
                                 <div id="card-descricao1-nivel">
-                                    {{searchResult.level.value}}
+                                    {{foundUser.level}}
                                 </div>
                                 <div id="card-descricao1-equipe">
-                                    {{searchResult.team}}
+                                    {{foundUser.team}}
                                 </div>
                             </div>
                             <img src="../../../assets/images/Fotologo.svg" alt="Foto do perfil">
                         </div>
                         <div id="card-descricao2">
                             <div id="card-descricao2-nome">
-                                {{searchResult.name}}
+                                {{foundUser.name}}
                             </div>
                             <div id="card-descricao2-atributos">
                                 <div id="card-desc2-atributos-col1">
@@ -59,43 +61,43 @@
                     <label for="name-search">
                         <img src="../../assets/images/user-icon.svg" alt="ícone de usuário">
                     </label>
-                    <input type="text" [(ngModel)]="searchTerm" (keyup.enter)="searchUser()" name="name-search" placeholder="Nome">
+                    <input type="text" name="name-search" #userName placeholder="Nome">
                 </div>
-                <input type="submit" value="Buscar" id="form-botao" (click)="searchUser()">
-            </div>
+                <button type="submit" id="form-botao">Buscar</button>
+            </form>
     
-            <form action="" id="form-data">
+            <form action="" id="form-data" #form="ngForm" [formGroup]="userForm" (ngSubmit)="updateUser()">
                 <h2>Preencha os campos abaixo com os <br> dados que deseja atualizar</h2>
 
                 <div class="input">
                     <label for="name">
                         <img src="../../assets/images/user-icon.svg" alt="ícone de usuário">
                     </label>
-                    <input type="text" name="name" id="name" [(ngModel)]="searchResult.name" placeholder="Nome">
+                    <input type="text" name="name" id="name" placeholder="Nome" formControlName="name" [readonly]="!foundUser">
                 </div>
 
                 <div class="input">
                     <label for="email">
                         <img src="../../assets/images/email-icon.svg" alt="ícone de usuário">
                     </label>
-                    <input type="email" name="email" id="email" [(ngModel)]="searchResult.email" placeholder="Email">
+                    <input type="email" name="email" id="email" placeholder="Email" formControlName="email" [readonly]="!foundUser">
                 </div>
 
                 <div class="input">
                     <label for="password">
                         <img src="../../assets/images/pass-icon.svg" alt="Ícone de senha">
                     </label>
-                    <input type="password" name="password" id="password" [(ngModel)]="searchResult.password" placeholder="Senha">
+                    <input type="password" name="password" id="password" placeholder="Senha" formControlName="password" [readonly]="!foundUser">
                 </div>
 
                 <div class="input">
                     <label for="team">
                         <img src="../../assets/images/team-icon.svg" alt="Ícone de senha">
                     </label>
-                    <input type="text" name="team" id="team" [(ngModel)]="searchResult.team" placeholder="Equipe">
+                    <input type="text" name="team" id="team" placeholder="Equipe" formControlName="team" [readonly]="!foundUser">
                 </div>
 
-                <input type="submit" value="Atualizar" id="form-botao" (click)="update()">
+                <button type="submit" id="form-botao" [disabled]="!foundUser">Atualizar</button>
             </form>
         </div>
     </div>
