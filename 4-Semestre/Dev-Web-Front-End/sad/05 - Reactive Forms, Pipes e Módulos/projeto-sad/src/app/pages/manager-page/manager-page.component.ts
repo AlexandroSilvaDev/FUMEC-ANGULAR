@@ -1,7 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 
-import { ActivatedRoute } from '@angular/router';
-import { Users, createUser } from 'src/app/model/users.model';
+import { Users } from 'src/app/model/users.model';
 import { UserService } from 'src/app/services/user.service';
 
 @Component({
@@ -11,6 +10,8 @@ import { UserService } from 'src/app/services/user.service';
 })
 export class ManagerPageComponent implements OnInit{  
   public users: Users[] = [];
+  filteredUsers: Users[] = [];
+  searchTerm!: string;
 
   constructor(private userService: UserService) {
     
@@ -19,6 +20,17 @@ export class ManagerPageComponent implements OnInit{
   ngOnInit(): void {
     this.userService.getAll().subscribe((users: Users[]) => {
       this.users = users;
+      this.filteredUsers = users;
     });
+  }
+
+  search() {
+    if(!this.searchTerm) {
+      this.filteredUsers = this.users;
+    } else {
+      this.filteredUsers = this.users.filter(user => 
+        user.name.toLocaleLowerCase().includes(this.searchTerm.toLocaleLowerCase())
+      );
+    }
   }
 }

@@ -6,6 +6,13 @@ export interface Users {
     team: string;
     name: string;
     photo: string;
+    TCS: number;
+    CTS: number;
+    CNTS: number;
+    CAS: number;
+    CNAS: number;
+    CSS: number;
+    CNSS: number;
 }
 
 export function createUser() {
@@ -16,6 +23,13 @@ export function createUser() {
         level: 0,
         team: "",
         name: "",
-        photo: ""
+        photo: "",
+        TCS: 0,
+        CTS: 0,
+        CNTS: 0,
+        CAS: 0,
+        CNAS: 0,
+        CSS: 0,
+        CNSS: 0
     };
 }

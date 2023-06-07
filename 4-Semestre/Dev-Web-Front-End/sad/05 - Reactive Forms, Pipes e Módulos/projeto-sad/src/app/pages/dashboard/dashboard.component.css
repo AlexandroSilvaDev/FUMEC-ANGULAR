@@ -78,6 +78,14 @@ td {
     padding: 8px;
 }
 
+.table-content {
+    text-align: center;
+}
+
+.gap-align {
+    padding-left: 15px;
+}
+
 tr:nth-child(2n) {
     background-color: lightgray;
 }
@@ -139,6 +147,7 @@ tr:nth-child(2n) {
 #card-descricao2 {
     color: white;
     font-family: 'Roboto', sans-serif;
+    font-size: 10px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -154,7 +163,6 @@ tr:nth-child(2n) {
 #card-descricao2-atributos {
     display: flex;
     flex-direction: row;
-    font-size: 10px;
     gap: 10px;
 }
 

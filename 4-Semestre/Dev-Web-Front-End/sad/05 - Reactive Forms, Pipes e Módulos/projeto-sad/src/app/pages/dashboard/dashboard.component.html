@@ -18,30 +18,24 @@
             </div>
             <div id="card-descricao2">
                 <div id="card-descricao2-nome">
-                    {{ user.name }}
+                    {{user.name}}
                 </div>
                 <div id="card-descricao2-atributos">
                     <div id="card-desc2-atributos-col1">
                         <div class="card-desc2-atributos" id="atributo1">
-                            <strong>91</strong> TCS
+                            <strong>{{user.TCS}}</strong> TCS
                         </div>
                         <div class="card-desc2-atributos" id="atributo2">
-                            <strong>91</strong> TCS
-                        </div>
-                        <div class="card-desc2-atributos" id="atributo3">
-                            <strong>91</strong> TCS
+                            <strong>{{user.CTS}}</strong> CTS
                         </div>
                     </div>
 
                     <div id="card-desc2-atributos-col2">
+                        <div class="card-desc2-atributos" id="atributo3">
+                            <strong>{{user.CAS}}</strong> CAS
+                        </div>
                         <div class="card-desc2-atributos" id="atributo4">
-                            <strong>91</strong> TCS
-                        </div>
-                        <div class="card-desc2-atributos" id="atributo5">
-                            <strong>91</strong> TCS
-                        </div>
-                        <div class="card-desc2-atributos" id="atributo6">
-                            <strong>91</strong> TCS
+                            <strong>{{user.CSS}}</strong> CSS
                         </div>
                     </div>
                 </div>
@@ -82,42 +76,41 @@
                     <td class="col-valores"><strong>Pontuação</strong></td>
                 </tr>
                 <tr>
-                    <td>Total de chamado solucionados</td>
-                    <td></td>
-                    <td></td>
+                    <td>Chamados solucionados</td>
+                    <td class="table-content"> {{ user?.TCS }} </td>
+                    <td class="table-content"></td>
                 </tr>
                 <tr>
-                    <td><img src="" alt=""> Pontuação de chamados triados dentro da SLA</td>
-                    <td></td>
-                    <td></td>
-                </tr>
-    
-                <tr>
-                    <td>Chamados não triados dentro da SLA</td>
-                    <td></td>
-                    <td></td>
+                    <td><img src="" alt="">Chamados triados dentro da SLA</td>
+                    <td class="table-content"> {{ user?.CTS }} </td>
+                    <td class="table-content"></td>
                 </tr>
                 <tr>
-                    <td><img src="" alt=""> Pontuação de chamados atendidos dentro da SLA</td>
-                    <td></td>
-                    <td></td>
+                    <td class="gap-align">Chamados não triados dentro da SLA</td>
+                    <td class="table-content"> {{ user?.CNTS }} </td>
+                    <td class="table-content"></td>
                 </tr>
                 <tr>
-                    <td>Chamados não atendidos dentro da SLA</td>
-                    <td></td>
-                    <td></td>
+                    <td><img src="" alt="">Chamados atendidos dentro da SLA</td>
+                    <td class="table-content"> {{ user?.CAS }} </td>
+                    <td class="table-content"></td>
                 </tr>
                 <tr>
-                    <td><img src="" alt=""> Pontuação de chamados solucionados dentro da SLA</td>
-                    <td></td>
-                    <td></td>
+                    <td class="gap-align">Chamados não atendidos dentro da SLA</td>
+                    <td class="table-content"> {{ user?.CNAS }} </td>
+                    <td class="table-content"></td>
                 </tr>
                 <tr>
-                    <td>Chamados não solucionados dentro da SLA</td>
-                    <td></td>
-                    <td></td>
+                    <td><img src="" alt="">Chamados solucionados dentro da SLA</td>
+                    <td class="table-content"> {{ user?.CSS }} </td>
+                    <td class="table-content"></td>
                 </tr>
                 <tr>
+                    <td class="gap-align">Chamados não solucionados dentro da SLA</td>
+                    <td class="table-content"> {{ user?.CNSS }} </td>
+                    <td class="table-content"></td>
+                </tr>
+                <!-- <tr>
                     <td><img src="" alt=""> Quantidade total de chamados solucionados por tipo</td>
                     <td></td>
                     <td></td>
@@ -146,7 +139,7 @@
                     <td><img src="" alt=""> Periféricos e Suprimentos</td>
                     <td></td>
                     <td></td>
-                </tr>
+                </tr> -->
             </table>
         </div>
     </div>

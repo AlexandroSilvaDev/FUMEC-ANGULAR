@@ -7,7 +7,14 @@
       "level": 91,
       "team": "N1",
       "name": "Thiago",
-      "photo": ""
+      "photo": "",
+      "TCS": 1,
+      "CTS": 1,
+      "CNTS": 1,
+      "CAS": 1,
+      "CNAS": 1,
+      "CSS": 1,
+      "CNSS": 1
     },
     {
       "id": 2,
@@ -16,7 +23,14 @@
       "level": 92,
       "team": "N1",
       "name": "Alexandro",
-      "photo": ""
+      "photo": "",
+      "TCS": 1,
+      "CTS": 1,
+      "CNTS": 1,
+      "CAS": 1,
+      "CNAS": 1,
+      "CSS": 1,
+      "CNSS": 1
     },
     {
       "id": 3,
@@ -25,7 +39,14 @@
       "level": 93,
       "team": "N1",
       "name": "Raian",
-      "photo": ""
+      "photo": "",
+      "TCS": 1,
+      "CTS": 1,
+      "CNTS": 1,
+      "CAS": 1,
+      "CNAS": 1,
+      "CSS": 1,
+      "CNSS": 1
     },
     {
       "id": 4,
@@ -34,7 +55,14 @@
       "level": 94,
       "team": "N1",
       "name": "Paulo",
-      "photo": ""
+      "photo": "",
+      "TCS": 1,
+      "CTS": 1,
+      "CNTS": 1,
+      "CAS": 1,
+      "CNAS": 1,
+      "CSS": 1,
+      "CNSS": 1
     },
     {
       "id": 5,
@@ -43,7 +71,14 @@
       "level": 95,
       "team": "N1",
       "name": "Lucas",
-      "photo": ""
+      "photo": "",
+      "TCS": 1,
+      "CTS": 1,
+      "CNTS": 1,
+      "CAS": 1,
+      "CNAS": 1,
+      "CSS": 1,
+      "CNSS": 1
     },
     {
       "id": 6,
@@ -52,7 +87,14 @@
       "level": 81,
       "team": "N2",
       "name": "Leia",
-      "photo": ""
+      "photo": "",
+      "TCS": 1,
+      "CTS": 1,
+      "CNTS": 1,
+      "CAS": 1,
+      "CNAS": 1,
+      "CSS": 1,
+      "CNSS": 1
     },
     {
       "id": 7,
@@ -61,7 +103,14 @@
       "level": 82,
       "team": "N2",
       "name": "Eugênia",
-      "photo": ""
+      "photo": "",
+      "TCS": 1,
+      "CTS": 1,
+      "CNTS": 1,
+      "CAS": 1,
+      "CNAS": 1,
+      "CSS": 1,
+      "CNSS": 1
     },
     {
       "id": 8,
@@ -70,7 +119,14 @@
       "level": 83,
       "team": "N1",
       "name": "Teófilo",
-      "photo": ""
+      "photo": "",
+      "TCS": 1,
+      "CTS": 1,
+      "CNTS": 1,
+      "CAS": 1,
+      "CNAS": 1,
+      "CSS": 1,
+      "CNSS": 1
     },
     {
       "id": 9,
@@ -79,7 +135,14 @@
       "level": 0,
       "team": "N2",
       "name": "Vitor",
-      "photo": ""
+      "photo": "",
+      "TCS": 1,
+      "CTS": 1,
+      "CNTS": 1,
+      "CAS": 1,
+      "CNAS": 1,
+      "CSS": 1,
+      "CNSS": 1
     },
     {
       "id": 10,
@@ -88,7 +151,14 @@
       "level": 0,
       "team": "N2",
       "name": "Pedro",
-      "photo": ""
+      "photo": "",
+      "TCS": 1,
+      "CTS": 1,
+      "CNTS": 1,
+      "CAS": 1,
+      "CNAS": 1,
+      "CSS": 1,
+      "CNSS": 1
     }
   ]
 }
