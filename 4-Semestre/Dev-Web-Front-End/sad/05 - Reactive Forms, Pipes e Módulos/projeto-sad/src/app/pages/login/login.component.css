@@ -95,7 +95,8 @@ form > div {
 footer {
     position: fixed;
     bottom: 0;
+    padding: 0px 6px 4px 6px;
     width: 100%;
-    text-align: right;
-    padding: 0px 6px 4px 0px;
+    display: flex;
+    justify-content: space-between;
 }
