@@ -91,3 +91,11 @@ form > div {
     background-color: #16682f;
     cursor: pointer;
 }
+
+footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    text-align: right;
+    padding: 0px 6px 4px 0px;
+}

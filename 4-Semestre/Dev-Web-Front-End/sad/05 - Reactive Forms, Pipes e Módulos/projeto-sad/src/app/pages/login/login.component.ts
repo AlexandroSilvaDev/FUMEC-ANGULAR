@@ -10,6 +10,7 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 })
 export class LoginComponent implements OnInit {
   public formLogin!: FormGroup;
+  hoje: number = Date.now();
 
   constructor(private authService: AuthService,
               private formBuilder: FormBuilder) {
